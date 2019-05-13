@@ -30,20 +30,18 @@ function deleteComment(id) {
 	}
 }
 
-function thumbUpComment(id, votes) {
+function thumbUpComment(votes) {
 	return 
 	{
 	    type: THUMB_UP_COMMENT,
-	    id: uuid.v4(),
 	    votes: votesThumbUp(votes)
 	}
 }
 
-function thumbDownComment(id, votes) {
+function thumbDownComment(votes) {
 	return 
 	{
 	    type: THUMB_DOWN_COMMENT,
-	    id: uuid.v4(),
 	    votes: votesThumbDown(votes)
 	}
 }
