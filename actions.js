@@ -13,11 +13,11 @@ function addComment(text) {
 	}
 }
 
-function editComment(text) {
+function editComment(text, id) {
 	return 
 	{
 	    type: EDIT_COMMENT,
-	    id: uuid.v4(),
+	    id,
 	    text
 	}
 }
@@ -26,22 +26,24 @@ function deleteComment(id) {
 	return 
 	{
 	    type: DELETE_COMMENT,
-	    id: uuid.v4()
+	    id
 	}
 }
 
-function thumbUpComment(votes) {
+function thumbUpComment(id, votes) {
 	return 
 	{
 	    type: THUMB_UP_COMMENT,
+	    id,
 	    votes: votesThumbUp(votes)
 	}
 }
 
-function thumbDownComment(votes) {
+function thumbDownComment(id, votes) {
 	return 
 	{
 	    type: THUMB_DOWN_COMMENT,
+	    id,
 	    votes: votesThumbDown(votes)
 	}
 }
